@@ -61,31 +61,23 @@ const pokeImage = (datos) => {
     document.getElementById("height").innerText = `${datos.height / 10} m`
     document.getElementById("weight").innerText = `${datos.weight / 10} kg`
     document.getElementById("abilities").innerHTML = abilitiesPkmn.join(" ")
-    //document.getElementById("category").innerText = 
-    //document.getElementById("category").innerText = ("HOLA");
 
     // Esto es para cambiar el tamaño de la barra de los stats de los pokemon
-    //document.getElementById("stat1").innerText = data.stats[0].stat.name;
     document.getElementById("hpBar").style.width = `${datos.stats[0].base_stat/2}%`;
     document.getElementById("hp").innerText = baseStat(datos.stats[0].base_stat.toString());
 
-    //document.getElementById("stat2").innerText = data.stats[1].stat.name;
     document.getElementById("atkBar").style.width = `${datos.stats[1].base_stat/2}%`;
     document.getElementById("atk").innerText = baseStat(datos.stats[1].base_stat.toString());
 
-    //document.getElementById("stat3").innerText = datos.stats[2].stat.name;
     document.getElementById("defBar").style.width = `${datos.stats[2].base_stat/2}%`;
     document.getElementById("def").innerText = baseStat(datos.stats[2].base_stat.toString());
 
-    //document.getElementById("stat4").innerText = datos.stats[3].stat.name;
     document.getElementById("satkBar").style.width = `${datos.stats[3].base_stat/2}%`;
     document.getElementById("satk").innerText = baseStat(datos.stats[3].base_stat.toString());
 
-    //document.getElementById("stat5").innerText = datos.stats[4].stat.name;
     document.getElementById("sdefBar").style.width = `${datos.stats[4].base_stat/2}%`;
     document.getElementById("sdef").innerText = baseStat(datos.stats[4].base_stat.toString());
 
-    //document.getElementById("stat5").innerText = datos.stats[4].stat.name;
     document.getElementById("spdBar").style.width = `${datos.stats[5].base_stat/2}%`;
     document.getElementById("spd").innerText = baseStat(datos.stats[5].base_stat.toString());
     //
