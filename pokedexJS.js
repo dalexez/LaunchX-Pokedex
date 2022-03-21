@@ -5,7 +5,8 @@ const fetchPokemon = () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${pkmnToSearch}`;
     fetch(url).then((res) => {
         if (res.status != "200") {
-            pokeImage("./pokemon-sad.gif")
+            console.log(res);
+            pokeImageError("./img/MissingNo.png")
         }
         else {
             return res.json();
@@ -16,6 +17,14 @@ const fetchPokemon = () => {
             pokeImage(datos);
         }
     });
+}
+
+const pokeImageError = (urlError) => {
+    const pokePhoto = document.getElementById("pokeImg");
+    pokePhoto.src = urlError;
+    document.getElementById("pokeImg").style.maxWidth = "20%"
+    document.getElementById("pokeName").innerText = "MissingNo"
+    document.getElementById("pokeNumber").innerText = "#000"
 }
 
 const pokeImage = (datos) => {
@@ -56,7 +65,6 @@ const pokeImage = (datos) => {
 
     document.getElementById("pokeName").innerText = datos.name
     document.getElementById("pokeNumber").innerText = number
-    //document.getElementById("type").innerText = datos.types[0].type.name
     document.getElementById("typePokemon").innerHTML = typesPoke.join(" ")
     document.getElementById("height").innerText = `${datos.height / 10} m`
     document.getElementById("weight").innerText = `${datos.weight / 10} kg`
