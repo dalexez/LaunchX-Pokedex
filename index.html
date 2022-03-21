@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./pokedexCSS.css">
+</head>
+<body>
+    <div class="divContainer">
+        <div class="headerContainer">
+            <div class="headerLogo">
+                <img src="./pokemonLogo.png" alt="logoPokemon">
+            </div>
+            <div class="barraBusqueda">
+                <input type="text" placeholder="Ingresa el nombre de un pokémon =)" id="pkmnToSearch" name="pokeName">
+                <button onclick="fetchPokemon()">Buscar</button>
+            </div>
+        </div>
+        <div class="pokemonContainer">
+            <div class="pokemonHeader">
+                <h2 id="pokeName">Charmander</h2>
+                <span class="pokeNumber" id="pokeNumber">#000</span>
+            </div>
+            <div class="pokemonImg">
+                <img src="./pngwing.com.png" alt="Pokemon" id="pokeImg">
+            </div>
+        <div class="statsContainer">    
+            <div class="typePokemon" id="typePokemon">
+                <p class="types">Invalido</p>
+            </div>
+            <div class="dataPokemon">
+                <div class="dataPkmnLeft">
+                    <ul>
+                        <li>
+                            <span class="dataPkmnTitle">Altura</span>
+                            <span class="dataPkmnValue" id="height">0,6</span>
+                        </li>
+                        <li>
+                            <span class="dataPkmnTitle">Peso</span>
+                            <span class="dataPkmnValue" id="weight">8,5 kg</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dataPkmnRight">
+                    <ul>
+                        <li>
+                            <span class="dataPkmnTitle">Categoria</span>
+                            <span class="dataPkmnValue" id="category">0,6</span>
+                        </li>
+                        <ul class="titleBot">
+                            <span class="dataPkmnTitle">Habilidades</span>
+                            <li class="dataPkmnValue" id="abilities">
+                                <span>polo</span>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="statsPokemon">
+                <ul class="nameStats">
+                    <li class="nameStat">HP</li>
+                    <li class="nameStat">ATK</li>
+                    <li class="nameStat">DEF</li>
+                    <li class="nameStat">SATK</li>
+                    <li class="nameStat">SDEF</li>
+                    <li class="nameStat">SPD</li>
+                </ul>
+                <hr>
+                <ul class="list-stats">
+                    <li class="stat">
+                        <span class="progress" id="hp">039</span>
+                        <div class="statBar">
+                            <span class="bar" id="hpBar" style="width: 10%"></span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <span class="progress" id="atk">052</span>
+                        <div class="statBar">
+                            <span class="bar" id="atkBar" style="width: 10%"></span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <span class="progress" id="def">043</span>
+                        <div class="statBar">
+                            <span class="bar" id="defBar" style="width: 10%"></span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <span class="progress" id="satk">060</span>
+                        <div class="statBar">
+                            <span class="bar" id="satkBar" style="width: 10%"></span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <span class="progress" id="sdef">050</span>
+                        <div class="statBar">
+                            <span class="bar" id="sdefBar" style="width: 10%"></span>
+                        </div>
+                    </li>
+                    <li class="stat">
+                        <span class="progress" id="spd">065</span>
+                        <div class="statBar">
+                            <span class="bar" id="spdBar" style="width: 10%"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="card-stats">
+                
+            </div> -->
+        </div>
+        </div>
+    </div>    
+</body>
+<footer>
+    <script src="./pokedexJS.js"></script>
+</footer>
+</html>
+
+
